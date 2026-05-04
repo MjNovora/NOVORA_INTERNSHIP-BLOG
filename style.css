@@ -231,13 +231,13 @@ circle {
     font-size: 12px;
 }
 
-/* GALLERY */
-.gallery {
+/* HIGHLIGHTS */
+.highlights {
     display: flex;
     gap: 10px;
 }
 
-.gallery img {
+.highlights img {
     width: 48%;
     border-radius: 8px;
 }
