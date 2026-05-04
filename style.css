@@ -82,6 +82,166 @@ body {
     display: inline-block;
 }
 
+.side-card {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.side-card h3 {
+    margin-bottom: 10px;
+    color: #1a2e5a;
+}
+
+.progress-card {
+    padding: 20px;
+}
+
+.progress-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* DONUT */
+.progress {
+    stroke: #080270; /* fallback muna */
+    stroke-width: 12;
+    fill: none;
+    stroke-linecap: round;
+
+    stroke-dasharray: 408;
+    stroke-dashoffset: 408;
+
+    transition: stroke-dashoffset 1.5s ease;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+circle {
+    fill: none;
+    stroke-width: 12;
+}
+
+.bg {
+    stroke: #e5e7eb;
+}
+
+.progress-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* spacing */
+    
+}
+.progress-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMPORTANT: this is the positioning anchor */
+.circle-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+/* TEXT CENTER */
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+    pointer-events: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-text span {
+    font-size: 26px;
+    font-weight: bold;
+    color: #111;
+    line-height: 1;
+}
+
+.circle-text small {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* DETAILS */
+.info {
+    background: #f4f4f4;
+    padding: 12px 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.green { color: #007c2e; }
+.red { color: #9e0303; }
+
+/* REQUIRED */
+.required {
+    margin-top: 15px;
+    padding: 12px;
+    background: #e9e5ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* WEEKLY GRAPH */
+.chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 160px;
+    margin-top: 20px;
+    padding-bottom: 25px; /* SPACE FOR LABELS */
+}
+
+.bar {
+    width: 28px;
+    background: #5b4db7;
+    border-radius: 10px;
+    position: relative;
+
+    height: 0;
+    transition: height 0.6s ease; /* IMPORTANT */
+}
+
+.bar span {
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 48%;
+    border-radius: 8px;
+}
+
 /* FACEBOOK STYLE OFFICE PROFILE */
 
 .dilg-office {
@@ -114,7 +274,7 @@ body {
 
 /* INFO */
 .dilg-info {
-    text-align: left;   /* change from center */
+    text-align: left;   
     padding: 15px 20px;
 }
 
