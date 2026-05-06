@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("JS WORKING");
 
     let required = 486;
-    let logged = 367;
+    let logged = 377;
 
     let percent = Math.round((logged / required) * 100);
     let remaining = required - logged;
@@ -42,5 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
             bar.style.height = (hours * 10) + "px";
         }, 300);
     });
-
 });
+
+    //Read More
+    function toggleReadMore(button) {
+        const weekCard = button.parentElement;
+        const fullContent = weekCard.querySelector(".full-content");
+        const preview = weekCard.querySelector(".preview");
+    
+        fullContent.classList.toggle("hidden");
+    
+        if (fullContent.classList.contains("hidden")) {
+            button.textContent = "Read More";
+            preview.style.display = "block";
+        } else {
+            button.textContent = "Show Less";
+            preview.style.display = "none";
+        }
+    }
