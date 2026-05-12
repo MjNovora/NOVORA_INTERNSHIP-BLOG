@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("JS WORKING");
 
     let required = 486;
-    let logged = 408;
+    let logged = 418;
 
     let percent = Math.round((logged / required) * 100);
     let remaining = required - logged;
