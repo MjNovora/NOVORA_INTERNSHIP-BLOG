@@ -69,13 +69,14 @@ body {
     background: #fff;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .week-card h3 {
     font-size: 16px;
     margin-bottom: 8px;
+    margin-left: 10px;
 }
 
 .week-card {
@@ -89,13 +90,16 @@ body {
 
 .preview {
     font-size: 13px;
+    margin-left: 10px;
     color: #555;
 }
 
 .full-content {
     margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
     font-size: 13px;
-    color: #333;
+    color: #000000;
 }
 
 .hidden {
@@ -135,8 +139,8 @@ body {
 
 .side-card {
     background: #ffffff;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 16px;
+    margin-top: 15px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     text-align: left;
@@ -255,31 +259,52 @@ circle {
     font-weight: bold;
 }
 
-/* WEEKLY GRAPH */
+.side-card {
+    padding: 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* CHART CONTAINER */
 .chart {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     height: 180px;
     margin-top: 20px;
-    padding-bottom: 25px; /* SPACE FOR LABELS */
+    padding-bottom: 25px;
 }
 
+/* BAR */
 .bar {
     width: 28px;
-    background: #080270;
+    background: linear-gradient(180deg, #150cb6, #05015e);
     border-radius: 10px;
     position: relative;
-    height: 10;
-    transition: height 0.6s ease; /* IMPORTANT */
+    height: 0px;
+    transition: height 0.6s ease;
 }
 
+/* LABEL (DAY) */
 .bar span {
     position: absolute;
     bottom: -22px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 12px;
+    color: #666;
+}
+
+/* VALUE (HOURS ABOVE BAR) */
+.bar-value {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    font-weight: 600;
+    color: #111;
 }
 
 /* FACEBOOK STYLE OFFICE PROFILE */
